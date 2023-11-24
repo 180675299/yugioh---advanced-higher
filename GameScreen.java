@@ -7,9 +7,9 @@ public class GameScreen {
     JPanel jPanel = new JPanel();
 
     public GameScreen() {
-        jFrame.setSize(960, 640);
-        jFrame.setLocationRelativeTo(null);
-        jFrame.setVisible(true);
+        this.jFrame.setSize(960, 640);
+        this.jFrame.setLocationRelativeTo(null);
+        this.jFrame.setVisible(true);
     }
 
 
