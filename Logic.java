@@ -1,6 +1,9 @@
+
+import Cards.NormalMonsterCard;
+
 public class Logic {
-    Card card1 = new Card("ogre", 1600, 1200, 4, "big bonk real stronk");
-    Card card2 = new Card("goblin", 1400, 900, 3, "speedy but weakly");
+    NormalMonsterCard ogre = new NormalMonsterCard("ogre", 1600, 1200, 4, "big bonk real stronk");
+    NormalMonsterCard goblin = new NormalMonsterCard("goblin", 1400, 900, 3, "speedy but weakly");
 
     public static void main(String[] args) {
         new Logic();
@@ -12,9 +15,32 @@ public class Logic {
     }
 
     public int cardAttack() {
-        int lifePoint = card1.attack - card2.attack;
+        int opponentLifePoint = 0;
+        int userLifePoint = 0;
+        int ogreAtk = ogre.getAttack();
+        int goblinAtk = goblin.getAttack();
+        int goblinDef = goblin.getAttack();
+        boolean isFaceUp = goblin.isFaceUp();
 
-        return lifePoint;
+        if(ogreAtk > goblinAtk && goblin.isFaceUp()) {
+            opponentLifePoint = ogreAtk - goblinAtk;
+            // get rid of card
+            return opponentLifePoint;
+        } else if (ogreAtk < goblinAtk && isFaceUp){
+            userLifePoint = goblinAtk - ogreAtk;
+            // get rid of card
+            return userLifePoint;
+        } else if (ogreAtk < goblinDef && !(isFaceUp)){
+            userLifePoint = goblinAtk - ogreAtk;
+            isFaceUp = true;
+            return userLifePoint;
+        } else if (ogreAtk > goblinDef && !(goblin.isFaceUp())){
+            // get rid of card
+            isFaceUp = true;
+            return 0;
+        } 
+        return 0;
     }
+
 
 }
