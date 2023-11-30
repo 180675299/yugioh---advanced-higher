@@ -14,8 +14,6 @@ public class Card {
         setFaceUp(true);
     }
 
-    
-
     public int getID() {
         return ID;
     }

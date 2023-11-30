@@ -14,22 +14,22 @@ public class GameScreen extends JFrame{
     
     public GameScreen() {
         
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(960, 640);
-        setLocationRelativeTo(null);
+    //     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    //     setSize(960, 640);
+    //     setLocationRelativeTo(null);
 
-        JPanel panel = new JPanel(new BorderLayout());
-        JPanel topPanel = new JPanel(new FlowLayout());
-        panel.add(topPanel, BorderLayout.NORTH);
+    //     JPanel panel = new JPanel(new BorderLayout());
+    //     JPanel topPanel = new JPanel(new FlowLayout());
+    //     panel.add(topPanel, BorderLayout.NORTH);
 
-        JPanel centerPanel = new PlayingField();
-        panel.add(centerPanel, BorderLayout.CENTER);
+    //     JPanel centerPanel = new PlayingField();
+    //     panel.add(centerPanel, BorderLayout.CENTER);
 
-        JPanel bottomPanel = new JPanel(new FlowLayout());
-        panel.add(bottomPanel, BorderLayout.SOUTH);
+    //     JPanel bottomPanel = new JPanel(new FlowLayout());
+    //     panel.add(bottomPanel, BorderLayout.SOUTH);
 
-        setContentPane(panel);
-        setVisible(true);
+    //     setContentPane(panel);
+    //     setVisible(true);
     }
 
 }
