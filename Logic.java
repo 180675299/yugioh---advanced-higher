@@ -9,7 +9,7 @@ public class Logic {
     }
     
     public Logic() {
-        new GameScreen();
+        // new GameScreen();
         
         int remainder = cardAttack();
         System.out.print("" + remainder);
@@ -23,8 +23,8 @@ public class Logic {
         int goblinDef = goblin.getAttack();
         boolean isFaceUp = goblin.isFaceUp();
 
-        if(ogre.getAttack() > goblin.getAttack()) {
-            opponentLifePoint = opponentLifePoint - (ogreAtk - goblinAtk);
+        // if(ogre.getAttack() > goblin.getAttack()) {
+            opponentLifePoint = opponentLifePoint - (ogre.getAttack() - goblin.getAttack());
             // get rid of card
             // return opponentLifePoint;
         // } else if (ogreAtk < goblinAtk && goblin.isFaceUp()){
@@ -36,7 +36,7 @@ public class Logic {
         // } else if (ogreAtk > goblinDef && goblin.isFaceUp() == false){
         //     // get rid of card
         //     isFaceUp = true;
-        } 
+        // } 
         return opponentLifePoint;
     }
 
