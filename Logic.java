@@ -4,7 +4,6 @@ import Cards.NormalMonsterCard;
 public class Logic {
     NormalMonsterCard ogre = new NormalMonsterCard(0,"ogre", 1600, 1200, 4, "big bonk real stronk");
     NormalMonsterCard goblin = new NormalMonsterCard(1,"goblin", 1400, 900, 3, "speedy but weakly");
-    GameScreen gameScreen;
     public static void main(String[] args) {
         new Logic();
     }
